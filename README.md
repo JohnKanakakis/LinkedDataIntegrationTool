@@ -16,10 +16,10 @@ heterogeneous data and extract useful information from them.
 ![alt tag] (https://github.com/JohnKanakakis/LinkedDataIntegrationTool/blob/master/img/ARCHITECTURE.jpg)
 
 ## Installation Guide
-1) Download the project
-2) Import project to Eclipse
-3) Configure Apache Tomcat server in Eclipse
-4) Deploy the project to Apache Tomcat
-5) Run the application
+1) Download the project\n
+2) Import project to Eclipse\n
+3) Configure Apache Tomcat server in Eclipse\n
+4) Deploy the project to Apache Tomcat\n
+5) Run the application\n
 
 ## User Interface
