@@ -13,7 +13,7 @@ contribution of the application is that users are able to combine - with little 
 heterogeneous data and extract useful information from them.
 
 ## Architecture
-![alt tag] (https://github.com/JohnKanakakis/LinkedDataIntegrationTool/blob/master/img/ARCHITECTURE.jpg)
+<img src="https://github.com/JohnKanakakis/LinkedDataIntegrationTool/blob/master/img/ARCHITECTURE.gif" height="500" width="600"></br>
 
 ## Installation Guide
 1. Download the project
@@ -22,4 +22,4 @@ heterogeneous data and extract useful information from them.
 4. Deploy the project to Apache Tomcat
 5. Run the application
 
-## User Interface
+
