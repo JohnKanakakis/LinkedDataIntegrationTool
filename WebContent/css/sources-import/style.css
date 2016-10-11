@@ -1,0 +1,675 @@
+@CHARSET "UTF-8";
+
+/* body{
+	font-size:medium;
+	font-family: Segoe UI,Arial,sans-serif;
+} */
+
+
+
+div.loading-message {
+    display:none;
+    background-image:url('/DataIntegrationTool/img/loading-image1.gif');
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+    opacity:1;
+    height: 100px;
+	width: 100px;
+	bottom: 5px;
+	right: 5px;
+	position: absolute;
+}
+
+
+#main-tabs{
+	border: 0px;
+}
+
+/*********************************************************** sources-accordion ********************************************************/
+#sources-accordion{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	font-size:small;
+}
+
+/* #sources-accordion > h3{
+	border-radius:0px;
+} */
+
+.add-icon-span{
+	/* position:absolute; */
+	float:right;
+	margin:0;
+	/* right:5px; */
+	width:20px;
+	height:20px;
+	/* top:5px; */
+ 	background: 
+                url('/DataIntegrationTool/img/plus.png')
+                no-repeat;
+    background-size: 20px 20px;
+    cursor:auto; 
+                
+}
+
+.add-new-source-image{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+}
+
+
+.list-sources-section{
+	border-radius:0px;
+}
+.accordion-source-box{
+	position:relative;
+	left:0px;
+	top:0px;
+	right:0px;
+	max-height:50px;
+	height:50px;
+	cursor:pointer;
+	padding:0px;
+	margin:0px;
+	background-color:white;
+	border-bottom: 1px solid #aaaaaa;
+}
+
+
+.accordion-source-name-box{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	width: 85%;
+	padding-left: 10px;
+	line-height: 3.5;
+}
+
+/* .accordion-source-box.source-selected,.accordion-source-box:hover,.accordion-source-box:visited{
+	background-color:#E6E6E6;
+} */
+
+.delete-source-icon-box{
+	position: absolute;
+	top: 3px;
+	right: 0px;
+	bottom: 0px;
+	width: 7%;
+}
+
+/***********************************************************************************************************************************/
+
+#main-tabs-navigation{
+	height:30px;
+	background: white;
+	border-bottom: 1px solid #aaaaaa;
+	border-radius: 0px;
+}
+
+#sources-preview{
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+
+
+.sources-preview-left-canvas{
+	position: relative;
+	width: 240px;
+	border: solid 1px #aaaaaa;
+	height: 100%;
+	float: left;
+}
+
+
+ 
+
+
+#sources-preview-main-area{
+	position:absolute;
+	top:0px;
+	right:4px;
+	left:250px;
+	bottom:4px;
+	border: solid 1px #aaaaaa;
+}
+
+#data-tabs{
+	position:absolute;
+	top:0px;
+	right:0px;
+	left:0px;
+	bottom:0px;
+	border:0px;
+}
+
+
+.main-tab{
+	position:absolute;
+	top:37px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	padding:0px;
+	border-radius:0px;
+}
+
+#data-tabs-navigation li { width:220px;height:33px;float: left; /* margin: 0; */ cursor: pointer; }
+#data-tabs-navigation {padding:0;position:absolute;top:0;left:0;right:0;height:35px;}
+
+/* ul.ui-tabs-nav{
+	overflow-x:auto; 
+	overflow-y:hidden;
+} */
+
+ul.ui-data-tabs-nav{
+	min-height:20px;
+	height:auto;
+	border-radius:0px;
+}
+
+.source-icon-container{
+	position:relative;
+	top:0;
+	left:0;
+	bottom:0;
+	width:40px;
+	height:30px;
+	float:left;
+}
+
+ .tab-label-container{
+	position:relative;
+	width:130px;
+	max-width:130px;
+	overflow:hidden;
+	line-height: 2.5;
+	white-space: nowrap;
+	
+} 
+
+ .tab-close-icon{
+ 	float:right;
+	/* position:absolute;
+	top:0;
+	width:20px;
+	bottom:0;
+	right:0; */
+} 
+#data-tabs-navigation .ui-tabs-anchor{
+	position:relative;
+	top:0;
+	left:0;
+	bottom:0;
+	width:170px;
+	cursor:pointer;
+	padding:0px;
+	height:30px;
+}
+/* .ui-data-tabs-nav > li.ui-state-default{
+	position:relative;
+	top:-10px;
+	height:20px;
+} */
+
+
+li.ui-state-default{
+	/* position:relative;
+	top:0px;
+	height:30px; */
+	font-size:small;
+	/* width:auto; */
+}
+ 
+.source-info-tab{
+	position:absolute;
+	top:40px;
+	left:0px;
+	bottom:0px;
+	right:0px;	
+}
+
+.left-vertical-panel{
+	position: absolute; 
+	top: 70px; 
+	left:5px;
+	width: 180px; 
+	margin:auto;
+	/* border:solid 1px #707070; */
+	max-width:200px;
+	bottom:5px;
+	height:590px;
+	/* background:black; */
+}
+
+/* .add-source-area{
+	top: 0px; 
+	left:0px;
+	width: 180px; 
+	border:solid 1px #707070; 
+	max-width:200px;
+	height:30px;
+	background:-o-linear-gradient(bottom, #4c4c4c 5%, #000000 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4c4c4c), color-stop(1, #000000) );	
+	background:-moz-linear-gradient( center top, #4c4c4c 5%, #000000 100% );	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#4c4c4c", endColorstr="#000000");	
+	background: -o-linear-gradient(top,#4c4c4c,000000);
+	background-color:#4c4c4c;
+	text-align:left;
+	font-size:14px;
+	font-family:arial;
+	font-weight:bold;
+	color:white;
+}
+
+.add-new-source-label{
+	vertical-align:middle;
+	height:30px;
+	width:80%;
+}
+.add-new-source-icon-area{
+	vertical-align:middle;
+	height:30px;
+	width:20%
+}
+
+.sparql-endpoints{
+	position: relative; 
+	top:20px;
+	left:0px; 
+	width: 180px;
+	max-width:200px;
+    height:526px; 
+	margin:auto;
+	text-align:left;
+ 	border:solid 1px #707070; 
+	color: black;
+	background:black;
+}
+
+.sparql-endpoints-table{
+	border-collapse:collapse;
+	border:solid 1px #707070;
+	background:-o-linear-gradient(bottom, #4c4c4c 5%, #000000 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4c4c4c), color-stop(1, #000000) );	
+	background:-moz-linear-gradient( center top, #4c4c4c 5%, #000000 100% );	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#4c4c4c", endColorstr="#000000");	
+	background: -o-linear-gradient(top,#4c4c4c,000000);
+	background-color:#4c4c4c;
+	border:0px solid #000000;
+	background:black;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+
+.sparql-endpoints-header{ 
+	width: 100%;
+    height:20px; 
+	text-align:left;
+	background:-o-linear-gradient(bottom, #4c4c4c 5%, #000000 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4c4c4c), color-stop(1, #000000) );	
+	background:-moz-linear-gradient( center top, #4c4c4c 5%, #000000 100% );	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#4c4c4c", endColorstr="#000000");	
+	background: -o-linear-gradient(top,#4c4c4c,000000);
+	background-color:#4c4c4c;
+	
+}
+
+.sparql-endpoint-cell{
+	position:relative;
+	left:0;
+	right:0;
+	width:200px;
+	height:30px;
+	margin-left:auto;
+	margin-right:auto;	
+    border:solid 1px #707070;
+    max-height:100%;
+    max-width:200px;
+    vertical-align:middle; 
+} 
+.sparql-endpoint-cell:hover{
+	 border:solid 2px #2e7db2;
+}
+
+.available-sparql-open{
+	max-height:80px;
+	min-width:150px;
+	max-width:170px;
+	cursor:pointer;
+} */
+
+
+.main-area{
+	
+	position: absolute;
+	top: 70px;
+	left: 5px;
+	height: 590px;
+	right: 5px;
+	color:black;
+}
+
+.textArea{
+	background-color:white;
+	color:black;
+	width:900px;
+	height:500px;
+	max-height:500px;
+	overflow:auto;
+}
+
+.source-tab-panel{
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*********************************** imported datasets tab ***********************************************************************/
+.datasets-import-area{
+	font-size:small;
+	height:60px;
+	margin-bottom:10px;
+	color:black;
+	padding-left: 20px
+}
+
+#importing-state{
+	position: absolute; 
+	top:100px;
+    width:1100px;
+    max-height:430px;
+    height:400px;
+    margin:5px;
+	padding:5px;
+	background-position:50% 50%;
+	background-image: url("/DataIntegrationTool/img/loading-image.gif");
+	background-repeat:no-repeat;
+	/* opacity: 0.5; */
+}
+ .imported-datasets-table-area{
+	position: absolute; 
+	top:100px;
+    width:1100px;
+    max-height:430px;
+    height:400px;
+	font-size:small;
+	color:black;
+	overflow:auto;
+	margin:5px;
+	padding:5px;
+	border-top:solid 5px #707070;
+	border-bottom:solid 5px #707070;
+} 
+
+
+
+
+.imported-datasets-description-table {
+	/* table-layout:fixed;  */
+	position: relative; 
+	border-collapse:collapse;
+	border:solid 1px #707070;
+	max-width:100%;
+	width:1000px;
+	font-size:small;
+}
+.imported-datasets-header-cell,.imported-datasets-header-row,.imported-dataset-row,.imported-dataset-cell{
+	
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse:collapse;
+	border:solid 1px #707070;
+	height:25px;
+	max-height:70px;
+	width:80px;
+	background-color: white;
+	text-align:center;
+}
+.imported-datasets-header-cell{
+	text-align:center;
+}
+
+.grid-button-container-class{
+	width:100%;
+	height:40px;
+	
+	font-size:small;
+}
+
+.grid-button-class{
+	float:left;
+	position:relative;
+	top:5px;
+	left:5px;
+}
+
+.importing {
+	background-position:50% 50%;
+	background-image: url("/DataIntegrationTool/img/loading-image.gif");
+	background-repeat:no-repeat;
+	opacity: 0.5;
+}
+
+/******************************************** triples-container-for-classes-and-properties-display **********************************/
+.triples-container-class{
+	height:200px;
+	width:920px;
+	border:solid 1px #707070;
+	margin:10px;
+} 
+
+.triples-vocabulary-class{
+	position:absolute;
+	top:30px;
+	left:5px;
+	right:5px;
+	bottom:10px;
+	font-size:small;
+}
+
+
+/********************************************** grid-container-for-tabular-data-display ****************************************/
+.grid-container-class{
+	position:absolute;
+	left:10px;
+	height:380px;
+	width:920px;
+	border:solid 1px #707070;
+} 
+/*******************************************************************************************************************************/
+
+
+
+/********************************************* relational-panel / sparql-endpoint-panel ****************************************************************/
+.relational-panel, .sparql-endpoint-panel{
+	position:absolute;
+	top:0px;
+	left:0px;
+	bottom:0px;
+	right:0px;	
+	font-size:small;
+}
+
+ .database-connection-info, .sparql-endpoint-info-area{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	height:50px;
+	/* background-color:white; */
+}
+
+
+.database-connection-info-table{
+	position:absolute;
+	top:5px;
+	left:5px;
+	border:solid 1px #707070;
+	font-size:small;
+	border-collapse:collapse;
+}
+
+.database-connection-info-table-cell{
+	border:solid 1px #707070;
+}
+
+ .query-editor-button-area{
+	position:absolute;
+	top:5px;
+	right:5px;
+	float:right;
+	font-size:small;
+} 
+
+.metadata-and-queries-panel{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+}
+.metadata-panel{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:30%;
+	bottom:0px;
+}
+.metadata-header,.queries-header,.sparql-queries-header{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	height:30px;
+	border-bottom: 1px solid #aaaaaa;
+	border-top: 1px solid #aaaaaa;
+	background:white;
+	color: black;
+	text-align:left;
+	font-size: medium;
+}
+
+.relational-panel-title{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: auto;
+	height: 100%;
+	line-height: 1.5;
+	padding-left: 5px;	
+}
+
+
+ .open-editor-span{
+	position:absolute;
+	top:5px;
+	left:80px;
+	width:20px;
+	height:20px;
+ 	background: 
+                url('/DataIntegrationTool/img/plus.png')
+                no-repeat;
+    background-size: 20px 20px;
+} 
+
+.metadata-info,.queries-info,.sparql-queries-info{
+	position:absolute;
+	top:33px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	
+	overflow:auto;
+}
+
+.database-metadata{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	overflow:auto;
+	white-space:nowrap;
+}
+
+.filetree span{
+	position: relative; 
+	top:-10px; 
+}
+
+.queries-panel{
+	position:absolute;
+	top:0px;
+	width:70%;
+	right:0px;
+	bottom:0px;
+	/* border:solid 1px #707070; */
+}
+
+.query-info-container{
+	position:relative;
+	overflow:hidden;
+	height:100px;
+	border:solid 1px #aaaaaa;
+	margin: 3px;
+	border-radius:4px;
+}
+.query-info-box{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 60%;
+	overflow: auto;
+	border: 0;
+	padding: 4px;
+}
+.view-query-data-button-area{
+	position:absolute;
+	float:left;
+	bottom:3px;
+	left:3px;
+	height:30%;
+}
+
+.delete-query-data-button-area{
+	position:absolute;
+	bottom:3px;
+	right:3px;
+	float:right;
+	height:20%;
+}
+
+.sparql-queries-panel{
+	position:absolute;
+	top:50px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	overflow:auto;
+}
+
+.query-text-area{
+	font-size: 10pt;
+	font-family: monospace;
+	padding: 10px;
+	border: 1px solid rgb(170, 170, 170);
+}

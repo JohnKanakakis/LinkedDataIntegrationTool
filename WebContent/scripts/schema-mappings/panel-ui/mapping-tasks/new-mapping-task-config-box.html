@@ -1,0 +1,28 @@
+<div class='window-box new-file-config-box'>
+	<div class='new-file-config-box-header'>
+		New mapping task configuration
+   		<img class="close-icon" src="img/cross.png" width="16px" height="16px" >
+	</div>
+	<br>
+	<br>
+	<form id="map-task-config-form">
+		<table>
+	  		<tr>
+	   			<td>Choose the input dataset:</td>
+	   			<td> 
+						<select id="files-select">
+						</select>
+				</td>
+	   		</tr>    
+	   		<tr>
+	     		<td>Give a name to the mapping task: </td>       
+	     		<td> <input type='text' id='map-task-name' size='50'></td>
+	     		<td id="task-name-exists-error"> <span>This mapping task name already exists!</span></td>
+	   		</tr>
+	    </table>
+	</form>
+	<br>
+	<br>
+    <button type="button" class='init-new-task-button'>Process the task</button> 
+    <button type="button" class='config-box-close-button'>Close</button>
+</div>

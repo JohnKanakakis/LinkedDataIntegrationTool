@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="ntua.thesis.dis.commands.Command" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/Command.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="183" x="617" y="332"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="ntua.thesis.dis.commands.PrefixesCommand" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/PrefixesCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="161" x="1065" y="239"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="ntua.thesis.dis.commands.GetDatasetMetadataCommand" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/GetDatasetMetadataCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="198" x="1044" y="95"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="ntua.thesis.dis.commands.GetLinkingTasksMetadataCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/GetLinkingTasksMetadataCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="229" x="1044" y="308"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="trash.GetPrefixesCommand" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/trash/trash/GetPrefixesCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="55" width="154" x="1065" y="162"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="ntua.thesis.dis.commands.importing.CreateDatasetsCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/importing/CreateDatasetsCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="174" x="1047" y="553"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="trash.DeleteSourceCommand" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/trash/trash/DeleteSourceCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="200" x="1046" y="482"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="ntua.thesis.dis.commands.importing.GetRelationalMetadataCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/importing/GetRelationalMetadataCommand.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="210" x="1044" y="412"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="ntua.thesis.dis.commands.importing.ImportJSONDataCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/importing/ImportJSONDataCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="54" width="177" x="1050" y="616"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="ntua.thesis.dis.commands.importing.ImportRelationalQueryCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/importing/ImportRelationalQueryCommand.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="54" width="209" x="1048" y="684"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="ntua.thesis.dis.commands.importing.ImportSPARQLEndpointCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/importing/ImportSPARQLEndpointCommand.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="215" x="1051" y="743"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="ntua.thesis.dis.commands.importing.ImportTabularFileCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/importing/ImportTabularFileCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="180" x="1049" y="801"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="ntua.thesis.dis.commands.importing.ImportTriplesFileCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/importing/ImportTriplesFileCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="213" x="1046" y="859"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="ntua.thesis.dis.commands.linking.GetLinkageRuleFunctionsCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/linking/GetLinkageRuleFunctionsCommand.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="288" x="22" y="488"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="ntua.thesis.dis.commands.linking.GetLinksCommand" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/linking/GetLinksCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="288" x="43" y="598"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="ntua.thesis.dis.commands.linking.GetPathInfoCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/linking/GetPathInfoCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="288" x="136" y="645"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="ntua.thesis.dis.commands.linking.GetRecommendedLinkingTasksCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/linking/GetRecommendedLinkingTasksCommand.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="288" x="253" y="682"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="ntua.thesis.dis.commands.linking.SaveLinkingTaskCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/linking/SaveLinkingTaskCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="288" x="213" y="692"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="ntua.thesis.dis.commands.linking.StartLinkingTaskCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/linking/StartLinkingTaskCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="288" x="273" y="720"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="ntua.thesis.dis.commands.mapping.ExternalVocabularyCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/mapping/ExternalVocabularyCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="276" y="17"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="ntua.thesis.dis.commands.mapping.GetDatasetVocabularyCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/mapping/GetDatasetVocabularyCommand.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="249" y="183"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="trash.GetImportedVocabulariesCommand" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/trash/trash/GetImportedVocabulariesCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="190" y="333"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="ntua.thesis.dis.commands.mapping.GetUndefinedNamespacesCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/mapping/GetUndefinedNamespacesCommand.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="282" y="440"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="ntua.thesis.dis.commands.mapping.SaveMappingTaskCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/mapping/SaveMappingTaskCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="687" y="105"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="ntua.thesis.dis.commands.mapping.StartMappingTaskCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/mapping/StartMappingTaskCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="539" y="209"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="ntua.thesis.dis.commands.queries.ExecuteSPARQLQueryCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/queries/ExecuteSPARQLQueryCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="288" x="515" y="481"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="ntua.thesis.dis.commands.dataspace.GetDataspaceVocabularyCommand" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/commands/dataspace/GetDataspaceVocabularyCommand.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="794" y="644"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="28">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="29">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="30">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="31">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="33">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="34">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="35">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="36">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="37">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="38">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="39">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="40">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="41">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="42">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="43">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="44">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="45">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="46">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="47">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="48">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="49">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="50">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="51">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="52">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="53">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

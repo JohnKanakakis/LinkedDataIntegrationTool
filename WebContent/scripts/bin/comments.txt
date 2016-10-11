@@ -1,0 +1,315 @@
+/*
+ui.source.file.CSVconvertToRDF = function(dataset,options) {
+
+	var record;
+	var numRecords = dataset.recordCount;
+	console.log("number of fields = "+numRecords);
+	
+	var fields=[];
+	var underscored_fields=[];
+	var field_id,replaced_field;
+	dataset.fields.each(function(field) {
+		field_id = field.id;
+		fields.push(field_id);
+		replaced_field = field_id.replace(/\//g,'_')
+								 .replace(/ /gi,'_')
+								 .replace(/&/gi,'and')
+								 .replace(/\(/gi,'_lp_')
+								 .replace(/\)/gi,'_rp_')
+								 .replace(/,/gi,'_')
+								 .replace(/\?/gi,'');
+		underscored_fields.push(replaced_field);
+				
+	});
+	
+	for(var i = 0; i < fields.length; i++){
+		console.log(underscored_fields[i]);
+	}
+	var RDFData = "";
+	
+	var baseURI = "http://localhost:8080/";
+	var tab = baseURI+"tab/"+ options.filename+"/TabularDef#";
+	
+	var rdf_prefix_statement = '@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>.';
+	var rdf_tab_statement = '@prefix tab:<'+ tab +'>.';
+	
+	RDFData = RDFData + rdf_prefix_statement + rdf_tab_statement;
+	console.log(tab);
+	
+	var datasetURI = baseURI+"tab/"+ options.filename+"/datasetName_UserDefined";
+	var basic_subjectURI = baseURI+"tab/"+ options.filename+"/row_number=";
+	var basic_predicateURI = tab;
+	var tab_prefix = "tab:";
+	var basic_objectURI = baseURI+"tab/"+ options.filename+"/row_number=";
+	
+	
+	
+	var subjectURI = basic_subjectURI;
+	var predicateURI = basic_predicateURI;
+	var objectURI = basic_objectURI;
+	var out_subjectURI ="";
+	
+	var DataSetStatement = '<' + datasetURI + '>' + 'rdf:type' + ' ' + 'tab:dataset.';
+	
+	RDFData = RDFData + DataSetStatement;
+	
+	var RDFStatement="";
+	for(var i = 0; i < numRecords; i++){
+		record = dataset.records.at(i);
+		subjectURI = subjectURI + i;
+		out_subjectURI = '<'+subjectURI+'>';
+		RDFData = RDFData + out_subjectURI;
+		for(var j = 0; j < fields.length; j++){
+
+			predicateURI = tab_prefix + underscored_fields[j];
+			objectURI = '<' + subjectURI + '/' + underscored_fields[j] + '=' + escape(record.get(fields[j])) + '>';
+			
+			RDFStatement = predicateURI  + objectURI + ';';
+			RDFData = RDFData + RDFStatement;
+
+			predicateURI = basic_predicateURI;
+			objectURI = basic_objectURI;
+		}
+		RDFData = RDFData + '.';
+		RDFStatement = "";
+		subjectURI = basic_subjectURI;
+		out_subjectURI ="";
+	}
+	//dataset.records.toJSON(); USEFUL!!!!!
+	
+	//console.log(RDFData);
+	//var json = dataset.fields.toJSON();	USEFUL!!!!!!!
+
+	$.ajax({
+		type : "POST",
+		url : "IntegrationServiceServlet/command/import/tabular",
+		data : RDFData,
+		success : function() {
+			console.log('the csvToRDF file has been uploaded');
+			$('.result-message-CSVtoRDF').remove();
+			var grid_button_area = $('.grid-button-container-class');
+			var textArea = $('<div>').addClass('result-message-CSVtoRDF').text('The file has been successfully uploaded and converted').css({'float':'left','margin-left':'10px','font-size':'small'});
+			grid_button_area.append(textArea);
+			textArea.fadeIn(7000);
+			textArea.fadeOut(7000);
+			
+			
+		}
+	});
+};
+
+*/
+
+
+/*
+controller.getSourceByTabID = function(tabId){
+	
+	var pos = 0;
+	for(var i = 0; i < controller.currentSources.length;i++){
+		
+		if (controller.currentSources[i].tab_id == tabId){
+			pos = i;
+			break;
+		}
+	};
+	return controller.currentSources[pos];
+};
+
+controller.sourceExists = function(tabId){
+	
+	for(var i = 0; i < controller.currentSources.length;i++){
+		
+		if (controller.currentSources[i].tab_id == tabId){
+			return true;
+		}
+	};
+	return false;
+};*/
+
+/*controller.addMetadata = function(newMetadata){
+	
+	controller.metadata.push(newMetadata);
+};
+
+
+controller.getMetadataByTabID = function(tabId){
+	
+	var pos = 0;
+	for(var i = 0; i < controller.metadata.length;i++){
+		
+		if (controller.metadata[i].tab_id == tabId){
+			pos = i;
+			break;
+		}
+	};
+	return controller.metadata[pos];
+	
+};*/
+
+/*controller.addCurrentFile = function(file){
+	controller.currentSources.push(file);
+};
+
+controller.printFiles = function(){
+	
+	for(var i = 0; i < controller.currentSources.length;i++){
+		console.log(controller.currentSources[i].tab_id+"/"+controller.currentSources[i].name+"/"+controller.currentSources[i].source.type+"/"+controller.currentSources[i].source.value);
+	};
+};*/
+
+
+
+/*controller.collectSelectedFiles = function(imported_sources_div){
+	
+	var table = imported_sources_div.find('.imported-source-description-table');
+	var selected_rows = table.find('tr.selected');
+	console.log(selected_rows.length);
+	
+	var proceedToSourcesSending = true;
+	
+	for (var i = 0; i < selected_rows.length; i++){
+		var row = $(selected_rows[i]);
+		var source_type = row.find('#imported-source-type').text();
+		var source_value = row.find('#imported-source-value').text();
+		var statements = row.find('#total-rows').text();
+		var filename = row.find('#filename').text();
+		var graph_name = row.find('#graph-name').val();
+		if (source_type=="File" && graph_name == ''){
+			alert('You must specify a valid graph name for every selected file');
+			proceedToFilesSources = false;
+			break;
+		}
+		console.log('source type = '+ source_type);
+		console.log('source value = '+ source_value);
+		console.log('statements = '+ statements);
+		console.log('filename= '+ filename);
+		console.log('graph name = '+ graph_name);
+		
+		var source = {
+				name:filename,
+				source:{
+						type:source_type,
+						value:source_value
+				},
+				rows:statements,
+				graph_name:graph_name
+		};
+		controller.selectedSources.push(source);
+	};
+	
+	if (proceedToSourcesSending){
+		controller.sendSelectedSources();
+	}
+	
+};
+*/
+
+/*panel.mappingFileArea.propertyMapping.addOneToOnePropertyMappingPair = function(){
+	
+	var box = null;
+	box = $('<div>').addClass('mapping-box property-mapping-box').load(panel.mappingFileArea.oneToOneLayoutURI,function(){
+				$('.map-boxes-area').append(box);
+				
+				box.on("click",".close-icon",function(event){
+					panel.mappingFileArea.deleteMappingBox(event);
+				});
+				
+				box.on("click",".add-transformation-icon",function(event){
+					var sourcePattern = box.find('.source-pattern');
+					if(sourcePattern.length == 0 || sourcePattern.css('display')=='none'){
+						alert('You must provide a source term first.');
+					}else{
+						alert('new transformation');
+					}	
+				});
+				var droppableArea = box.find(".droppable-area");
+				droppableArea.droppable({
+					  accept: ".property-box",
+					  drop: function( event, ui ) {
+						    var sourcePattern = droppableArea.find('.source-pattern');
+							if (sourcePattern.css('display') == 'none'){
+								panel.mappingFileArea.propertyMapping.addSourcePattern(box,droppableArea,ui.helper.text());
+							}else{
+								if (sourcePattern.text() != ui.helper.text()){
+									 alert('You are trying to override a current source term.'+
+										   'Please define a new mapping pair.');
+								}
+							}
+				      },
+				      out: function( event, ui ) {
+				    	  var p = $('<p>');
+				    	  p.val('Drag here the vocabulary term you want from the Properties Section');
+				    	  droppableArea.append(p);
+				      },
+			    	  over: function( event, ui ) {
+				    	  var sourcePattern =  droppableArea.find('.source-pattern');
+				    	  if (sourcePattern.length != 1){
+				    		  sourcePattern = $('<div>').addClass('source-pattern');
+				    		  droppableArea.append(sourcePattern);
+				    	  }
+			    	 
+			    	  }
+				});
+		  });
+};
+
+
+panel.mappingFileArea.propertyMapping.addOneToManyPropertyMappingPair = function(){
+	var box = null;
+	var objects = 1;
+	box = $('<div>').addClass('mapping-box property-mapping-box').load(panel.mappingFileArea.oneToManyLayoutURI,function(){
+				$('.map-boxes-area').append(box);
+				
+				box.on("click",".close-icon",function(event){
+					panel.mappingFileArea.deleteMappingBox(event);
+				});
+				
+				box.on("click",".add-transformation-icon",function(event){
+					var sourcePattern = box.find('.source-pattern');
+					if(sourcePattern.length == 0 || sourcePattern.css('display')=='none'){
+						alert('You must provide a source term first.');
+					}else{
+						ui.transformationBox.open(event);
+					}	
+				});
+				var droppableArea = box.find(".droppable-area");
+				droppableArea.droppable({
+					  accept: ".property-box",
+					  drop: function( event, ui ) {
+						    var sourcePattern =  droppableArea.find('.source-pattern');
+							
+						    if(sourcePattern.length == 0){
+						    	sourcePattern = $('<div>').addClass('source-pattern');
+						    	droppableArea.append(sourcePattern);
+						    	droppableArea.find('p').remove();
+						    }
+						    if (sourcePattern.css('display') == 'none'){
+						    	box.attr('objects',objects);
+						    	panel.mappingFileArea.propertyMapping.addSourcePattern(box,droppableArea,ui.helper.text());
+						    	objects++;
+						    }else{
+								if (sourcePattern.text() != ui.helper.text()){
+									 alert('You are trying to override a current source term.'+
+										   'Please add a new source term.');
+								}
+							}
+						    var targetRow = box.find('.target-row');
+						    var targetRowTd = targetRow.find('td');
+						    if (targetRowTd.length == 0){
+						    	targetRow.html("<td style='vertical-align:top;padding-left:3px'>"+ initTargetTermHTML+"</td>");
+						    	targetRow.on('click','.submit-target-term-button',function(event){
+						    		event.preventDefault();
+						    		submitTerm(box,event);
+						    	});
+						    }
+				      }
+			    	  over: function( event, ui ) {
+				    	  var sourcePattern =  droppableArea.find('.source-pattern');
+				    	  if (sourcePattern.length != 1){
+				    		  sourcePattern = $('<div>').addClass('source-pattern');
+				    		  droppableArea.append(sourcePattern);
+				    	  }
+			    	  }
+				});
+		  });
+};*/

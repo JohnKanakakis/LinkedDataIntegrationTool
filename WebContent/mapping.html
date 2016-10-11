@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd'>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+	<title>Data Integration</title>
+	
+	
+	<script src="scripts/js/jquery-1.10.2.min.js"></script>
+	<script src="scripts/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+	<script type="text/javascript" src='externals/selectBox/jquery.selectbox-0.2.js'></script>
+	<link rel='stylesheet' type='text/css' href='externals/selectBox/jquery.selectbox.css'  media='screen' charset='utf-8'>
+	
+	<script type="text/javascript" src="externals/jsPlumb/jquery.jsPlumb-1.5.2-all.js"></script>
+	<script type="text/javascript" src="externals/jsPlumb/excanvas.js"></script>
+	
+	<script type="text/javascript" src='scripts/schema-mappings/panel-ui/panel-ui.js'></script>
+	<script type="text/javascript" src='scripts/general/util.js'></script>
+	<script type="text/javascript" src='scripts/schema-mappings/panel-ui/mapping-tasks/new-mapping-task-config-ui.js'></script>
+	<script type="text/javascript" src='scripts/schema-mappings/panel-ui/mapping-tasks/import-vocabulary-ui.js'></script>
+	
+	
+	<script type="text/javascript" src='scripts/schema-mappings/panel-ui/mapping-tasks/mapping-editor-ui-new.js'></script>
+	<script type="text/javascript" src='scripts/schema-mappings/panel-ui/mapping-tasks/mapping-panel-control-ui.js'></script>
+	
+	
+	<script type="text/javascript" src='scripts/general/history-info-ui.js'></script>
+	<script type="text/javascript" src='scripts/schema-mappings/mappings-manager/mappings-manager.js'></script>
+	
+	
+	<script type="text/javascript" src='scripts/schema-mappings/init.js'></script>
+	
+	<script type="text/javascript" src="externals/slick/jquery.event.drag-2.2.js"></script>
+  	<script type="text/javascript" src="externals/slick/slick.core.js"></script>
+  	<script type="text/javascript" src="externals/slick/slick.grid.js"></script>
+  	
+  	<link rel="stylesheet" href="externals/slick/slick.grid.css" type="text/css"/>
+	
+	
+	<script type="text/javascript" src="externals/jquery.treeview/jquery.treeview.js"></script>
+	<link href="externals/jquery.treeview/jquery.treeview.css" rel="stylesheet"></link>
+	
+	<link rel='stylesheet' type='text/css' href='css/global-style.css'   media='screen' charset='utf-8'>
+	<link rel='stylesheet' type='text/css' href='css/ui-smoothness/jquery-ui-1.10.3.custom.css' media='screen' charset='utf-8'>
+	<link rel='stylesheet' type='text/css' href='css/schema-mappings/style.css'   media='screen' charset='utf-8'>
+</head>
+<body>
+	<div class='mainContent'> 
+		<div class='header'> </div>	
+		<div id="main-tabs" class="ui-corner-all">
+			<div id="mapping-task-tab" class='main-tab'>
+				<div id="mapping-tasks-left-panel" class="left-vertical-panel" style="width:220px;">
+					<div id="mapping-tasks-left-panel-header"class='box-header'>
+						<span id="mapping-tasks-menu-icon" class='menu-span hide-span'></span>
+						<ul id="mapping-tasks-menu" class="ui-menu" style="position:absolute;top:25px;left:8px;cursor:pointer;width:150px;height:50px;z-index:100;font-size:small;float:left;display:none">
+  							<li id="history"><a>History</a></li>
+  							<li id="step-info"><a>Info about this step</a></li>
+						</ul> 
+						<span id="mapping-tasks-general-info"style="position:absolute;left:30px;width:auto;height:100%;top:0px;">Mapping Tasks</span>	
+						<!-- <span id="add-new-mapping-task" class='add-icon-span'></span> -->
+					</div>
+					<div id="mapping-tasks-left-panel-body"class='box-body'>
+						
+					</div>
+				</div>
+				<div id="mapping-editor"  class="main-panel">	
+				</div>
+				<div id="history-panel" class="main-panel" style="display:none"></div>
+			</div>
+		</div>
+	</div>
+	<div id='new-mapping-task-config-window' class='pop-up-window'></div>
+	<div class='transformation-window'></div>
+	<div id="new-target-vocabulary-config-window" class='pop-up-window'></div>
+</body>
+</html>

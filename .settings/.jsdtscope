@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="WEB-INF/lib/jQuery-1.10.1.js|externals/recline/jquery-ui-1.10.3.custom.min.js|externals/recline/recline.js|externals/recline/slick.grid.min.js|scripts/js/jquery-1.10.2.min.js|scripts/js/jquery-ui-1.10.3.custom.min.js|slick/jquery-1.7.min.js" kind="src" path="WebContent"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.WebProject">
+		<attributes>
+			<attribute name="hide" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.baseBrowserLibrary"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

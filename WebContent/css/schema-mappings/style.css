@@ -1,0 +1,388 @@
+@CHARSET "UTF-8";
+
+
+#mapping-editor{
+	position:absolute;
+	top:0px;
+	left:221px;
+	right:0px;
+	bottom:0px;
+	/* overflow-y:auto; */
+}
+
+
+#mapping-task-navigation-bar{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	height:40px;
+	font-size:small;
+}
+
+#accordion-container{
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	font-size: small;
+	border-top:solid 1px #707070;
+}
+
+#target-vocabulary-accordion{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+
+#mapping-actions-panel{
+	position:absolute;
+	top:0px;
+	height:40px;
+	border-bottom:solid 1px #707070;
+}
+.mapping-icon-span{
+	position:absolute;
+	width:20px;
+	height:20px;
+	top:10px;
+	cursor:pointer;
+	background: #f58400
+                url('/DataIntegrationTool/img/run-icon.png')
+                no-repeat;
+}
+.target-vocabulary-boxes-container{
+	position:relative;
+	overflow:auto;
+	height:375px;
+}
+
+.vocabulary-box{
+	position:absolute;
+	left:0px;
+	width:100%;
+	height:200px;
+	text-align:left;
+	border-bottom:solid 1px #707070;
+	border-top:solid 1px #707070;
+	font-size:12px;
+	white-space:nowrap;
+	background:black;
+}
+
+
+
+.vocabulary-term-box{
+	position: absolute; 
+	left:0px; 
+	width:194px;
+    height:30px; 
+ 	border:solid 1px #707070; 
+	background:black;
+	padding-left:5px;
+	font-size:12px;
+	cursor:pointer;
+}
+
+
+
+.mapping-task-related-tab-panel{
+	position:absolute;
+	top:45px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+}
+
+
+.mapping-task-status-box{
+	position:relative;
+	left:0px;
+	right:0px;
+	height:50px;
+	border-bottom:solid 1px #aaaaaa;
+	margin-top: 1px;
+}
+
+
+ 
+ /************************************** results-tab ********************************************/
+ 
+ #mapping-results-panel{
+ 	position:absolute;
+ 	left:0px;
+ 	top:0px;
+ 	bottom:0px;
+ 	background:black;
+ }
+
+#buttons-area{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	height:30px;
+	border-bottom:1px solid #aaaaaa;
+}
+
+#buttons-area > button {
+	position:relative;
+	border-radius:4px;
+	margin-top:2px;
+	border: 1px solid #aaaaaa;
+	height:25px;
+	width:70px;
+}
+
+#apply-mappings-button{
+	left:5px;
+	/* height: 30px; */
+	float:left;
+}
+#save-mappings-button{
+	right:5px;
+	/* height: 30px; */
+	float:right;
+}
+
+#more-button{
+	margin-right:5px;
+	margin-left:5px;
+	
+	float:left;
+	/* height: 25px; */
+}
+
+#more-button span{
+	margin:0;
+	margin-right:3px;
+	float:left;
+}
+
+#menu-container{
+	position: absolute;
+	width: 500px;
+	height: 350px;
+	background: white;
+	padding: 5px;
+	border: 1px solid #aaaaaa;
+	box-shadow: 4px 4px 14px #aaaaaa;
+}
+.menu-container-header{
+	height:30px;
+	border-bottom: 1px solid #aaaaaa;
+	padding-left: 5px;
+	font-size: medium;
+}
+
+.menu-container-body{
+	width:100%;
+}
+
+.menu-container-table{
+	font-size: small;
+	table-layout:fixed;
+	border-collapse:collapse;
+	width: 100%;
+	text-align: left;
+	border-bottom: 1px solid #aaaaaa;
+}
+.menu-container-table tbody{
+	overflow-y: auto;
+	max-height: 300px;
+	display: block;
+}
+.menu-container-table tr{
+	width: 100%;
+	float: left;
+}
+
+.menu-container-table td{
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	display:block;
+}
+
+.menu-container-table tr:nth-child(even) {background-color:white}
+.menu-container-table tr:nth-child(odd) {background-color: #F5F5F5}
+
+
+
+#mappings-tree-container{
+	position: absolute;
+	left: 5px;
+	right: 5px;
+	bottom:0px;
+	top: 40px;
+	overflow:auto;
+}
+/********************************* tree-view *****************************/
+.tree-mappings-menu {
+	/* border: solid 1px #aaaaaa; */
+} 
+
+.tree-mappings-menu textarea.pattern-area{
+	resize:none;
+	border: 1px solid #aaaaaa
+}
+
+
+.tree-mappings-menu textarea.pattern-area.wrong-pattern{
+	border: 1px solid rgb(243, 97, 97);
+    box-shadow: 5px 5px 5px #f5f5f5
+}
+
+.tree-mappings-menu  .hitarea{
+	position: relative;
+	top: 5px;
+	left: 0px;
+	margin-right: 5px;
+	margin-left: 0px;
+	float: left;
+	cursor: pointer;
+	width:16px;
+	height:16px;
+} 			
+ 		 	
+.tree-mappings-menu  .expandable-hitarea {
+
+	background: white url('/DataIntegrationTool/externals/jquery.treeview/images/right-icon.png') 0px 0px no-repeat; 
+}
+
+.tree-mappings-menu  .collapsable-hitarea{
+
+	background: white url('/DataIntegrationTool/externals/jquery.treeview/images/down-icon.png') 0px 0px no-repeat; 
+}
+ 
+.tree-mappings-menu  ul.main-mapping-ul{
+	position:relative;
+	top:20px;
+}
+
+.tree-mappings-menu  li.root-li{
+	border-top: 1px solid #aaaaaa;
+}
+
+.tree-mappings-menu  li.root-li.wrong-mapping{
+	border: 1px solid rgb(243, 97, 97);
+    box-shadow: 5px 5px 5px #f5f5f5;
+    border-radius: 4px;
+}
+
+
+.tree-mappings-menu  li{
+	position:relative;
+	padding: 0px 0pt 0px 16px;
+}
+.tree-mappings-menu  li.main-mapping-li{
+	/* border-bottom:solid 1px #aaaaaa;
+	border-radius:4px; */
+	padding:10px 0pt 30px 6px
+}
+
+.tree-mappings-menu  li.main-mapping-li.collapsable{
+	padding:10px 0pt 20px 6px
+}
+
+
+
+.tree-mappings-menu  li.lastExpandable,.tree-mappings-menu  li.lastCollapsable{
+	border-bottom:0;
+}
+
+
+
+
+
+
+.mapping-terms-block{
+	position : relative;
+	/* border-top: solid 1px #aaaaaa;  */
+	height:40px;
+}
+
+ .mapping-terms-block div{
+	position:relative;
+	/* margin-left:5px;
+	margin-right:5px; */
+	font-size:small;
+	max-width:100%;
+	float:left;
+	height: 30px;
+	line-height: 2.5;
+	overflow: hidden;
+	white-space: nowrap;
+} 
+
+.mapping-terms-table{
+	position:absolute;
+	width: 99%;
+	border-collapse:collapse;
+	table-layout:fixed;
+}
+
+.mapping-terms-table  td{
+	width:460px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.mapping-terms-table  td.result{
+	width:100px;
+}
+
+.results-term{
+	white-space:nowrap;
+	overflow:hidden;
+	width:450px;
+	border : solid 1px #707070; 
+}
+
+
+.results-mapping-arrow{
+	/* background:  url('/DataIntegrationTool/img/long-right-arrow.gif') 0px 0px no-repeat;  */
+}
+
+.failed-mapping{
+	width:20px;
+	background:  url('/DataIntegrationTool/img/wrong-icon.png') 0px 0px no-repeat;
+	
+}
+.successfull-mapping{
+	width:20px;
+	background:  url('/DataIntegrationTool/img/correct-icon.png') 0px 0px no-repeat;
+}
+
+
+.ui-autocomplete{
+	font-size:small;
+	max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.delete-target-term-icon{
+	float:left;
+	cursor:pointer;
+}
+
+.add-target-term-icon{
+	float:right;
+	cursor:pointer;
+}
+
+.extend-source-term-icon{
+	float:left;
+	cursor:pointer;
+}
+
+.delete-li-icon{
+	float:right;
+	cursor:pointer;
+}
+

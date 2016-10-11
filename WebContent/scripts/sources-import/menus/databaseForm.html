@@ -1,0 +1,22 @@
+<form id='database-form'>
+	<input type="radio" class="database-url-type" name="database-url-type" value="local">Local database connection 
+	<input type="radio" class="database-url-type" name="database-url-type" value="remote">Remote database connection
+     <table style="display:none">
+  		<tr id="database-url-row" class='input'>
+   			<td>Database URL:</td>
+   			<td> <input type='text' name='databaseURL' id='databaseURL' size='50'></td>
+   		</tr>    
+   		<tr class='input'>
+     		<td>Database Schema: </td>
+     		<td> <input type='text' name='databaseSchema' id='databaseSchema' size='50'></td>
+   		</tr>
+   		<tr class='input'>
+     		<td>Username: </td>       
+     		<td> <input type='text' name='databaseUsername' id='databaseUsername' size='50'></td>
+   		</tr>
+    	<tr class='input'>
+      		<td>Password: </td>
+      		<td><input type='text' name='databasePassword' id='databasePassword' size='50'></td>
+    	</tr>
+    </table>
+ </form>

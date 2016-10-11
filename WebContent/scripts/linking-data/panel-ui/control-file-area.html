@@ -1,0 +1,62 @@
+<div class="control-file-area">
+	<div class="linking-file-info">
+		<table class='info-table' style="float:left">
+			<tr>
+				<td style="width:95px"> Source Dataset:</td>
+				<td> 
+					<div id="source-dataset-name" style="position:relative;top:0px;left:0px;
+					height:30px;overflow:auto"></div>
+				</td>
+				<td style="width:65px"> Restrict To:</td>
+				<td>
+					<div id="source-restrict-to-area" style="position:relative;top:0px;left:0px;
+					height:30px;overflow-y:auto;border:solid 1px #707070;"></div>
+				</td>
+			</tr>
+			<tr>
+				<td style="width:95px"> Target Dataset:</td>
+				<td> 
+					<div id="target-dataset-name" style="position:relative;top:0px;left:0px;
+					height:30px;overflow:auto"></div>
+				</td>
+				<td style="width:65px"> Restrict To:</td>
+				<td>
+					<div id="target-restrict-to-area" style="position:relative;top:0px;left:0px;
+					height:30px;overflow-y:auto;border:solid 1px #707070;"></div>
+				</td>
+				
+		</table>
+	</div>
+	<div class="linking-actions-area">
+		<table>
+			<tr id="verify-output-row">
+				<td>Links to verify window:</td>
+				<td>Min Confidence:</td>
+				<td><input type='text' class='confidence-input' id='verify-min-conf' size='5'></td>
+				<td>Max Confidence:</td>
+				<td><input type='text' class='confidence-input' id='verify-max-conf' size='5'></td>
+			</tr>
+			<tr id="accept-output-row">
+				<td>Accepted links window:</td>
+				<td>Min Confidence:</td>
+				<td><input type='text' class='confidence-input' id='accept-min-conf' size='5'></td>
+				<td>Max Confidence:</td>
+				<td><input type='text' class='confidence-input' id='accept-max-conf' size='5'></td>
+			</tr>
+		</table>	
+	</div>
+	<div class="buttons-area">
+		<table>
+			<tr>
+				<td style="height:30px">
+					<button type="button" class='submit-linking-task-button'>Start linking</button>
+				</td>
+			</tr>
+			<tr>
+				<td style="height:30px">
+					<button type="button" class='delete-linking-task-button'>Delete rule</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

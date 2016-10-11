@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd'>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+	<title>Data Integration</title>
+<!-- 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+
+	<script src="scripts/js/jquery-1.10.2.min.js"></script>
+	<script src="scripts/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src='scripts/general/history-info-ui.js'></script>
+	<script type="text/javascript" src='scripts/queries/init.js'></script>
+	<script type="text/javascript" src='scripts/general/util.js'></script>
+	
+	<script type="text/javascript" src='scripts/queries/panel-ui/panel-ui.js'></script>
+	<script type="text/javascript" src='scripts/queries/panel-ui/query-panel-control-ui.js'></script>
+	<script type="text/javascript" src='scripts/queries/panel-ui/query-editor-ui.js'></script>
+	<script type="text/javascript" src='scripts/queries/panel-ui/results-ui.js'></script>
+	<script type="text/javascript" src='scripts/queries/queries-manager/queries-manager.js'></script>
+	
+  	
+  	<!-- slick scripts -->
+  	<script type="text/javascript" src="externals/slick/jquery.event.drag-2.2.js"></script>
+  	<script type="text/javascript" src="externals/slick/slick.core.js"></script>
+  	<script type="text/javascript" src="externals/slick/slick.grid.js"></script>
+  	
+  	<link rel="stylesheet" href="externals/slick/slick.grid.css" type="text/css"/>
+  
+
+	<link rel="stylesheet" href="css/ui-smoothness/jquery-ui-1.10.3.custom.css" />
+  	<link rel='stylesheet' type='text/css' href='css/global-style.css' media='screen' charset='utf-8'>
+	
+	<link rel='stylesheet' type='text/css' href='css/queries/style.css'   media='screen' charset='utf-8'>
+	
+	
+	<link href="externals/jquery.treeview/jquery.treeview.css" rel="stylesheet"></link>
+	<script type="text/javascript" src="externals/jquery.treeview/lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="externals/jquery.treeview/jquery.treeview.js"></script>
+
+</head>
+<body>
+	<div class='mainContent'> 
+		<div class='header'> </div>
+		<div id="main-tabs" class="ui-corner-all">
+			<div id="queries-tab" class='main-tab'>
+				<div id="queries-left-panel" class="left-vertical-panel" style="width:220px;">
+					<div id="queries-left-panel-header" class='box-header'>
+						<span class='menu-span'></span>
+						<ul id="menu" class="ui-menu" style="position:absolute;top:20px;left:10px;cursor:pointer;width:150px;height:50px;z-index:100;font-size:small;float:left">
+  							<li id="history"><a>History</a></li>
+  							<li id="step-info"><a>Info about this step</a></li>
+						</ul>
+						<span id="queries-info" style="position:absolute;left:30px;width:auto;height:100%;top:0px;">Queries</span>	
+						<span id="add-new-query" class='add-icon-span' style="right:5px"></span>
+					</div>
+					<div id="queries-left-panel-body" class='box-body'>
+						
+					</div>
+				</div>
+				<div id="query-tabs-container" class="main-panel" style="border-bottom-right-radius: 4px">	
+					<ul id="queries-navigation-bar">
+						<li id="query-editor-li"><a href="#query-editor">Query editor</a></li>
+						<li><a href="#results">Results</a></li>
+					</ul>
+					<div id="query-editor" class="query-related-tab-panel ui-corner-all">
+					</div>
+					<div id="results" class="query-related-tab-panel"></div>
+				</div>
+				<div id="history-panel" class="main-panel" style="display:none"></div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- <div class='new-mapping-task-config-window'></div>
+	<div class='transformation-window'></div> -->
+</body>
+</html>

@@ -1,0 +1,53 @@
+.transformation-function-box,.aggregation-function-box,.input-path-box{
+	width:230px;
+	border:solid 2px #aaaaaa;
+	border-radius:4px;
+	height:90px;
+	background:white;
+	cursor:pointer;
+}
+
+.comparison-function-box{
+	position:relative;
+	width:250px;
+	border:solid 2px #aaaaaa;
+	border-radius:4px;
+	height:170px;
+	background:white;
+	cursor:pointer;
+}
+
+.function-box-header{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:30px;
+	right:0px;
+	border-bottom:solid 1px #aaaaaa;
+	padding-left:3px;
+	padding-right:3px;
+	cursor:pointer;
+}
+
+.function-box-body{
+	position:absolute;
+	top:33px;
+	left:0px;
+	bottom:0px;
+	right:0px;
+	padding-left:3px;
+	padding-right:3px;
+	cursor:pointer;
+}
+
+.function-param-table{
+	position:relative;
+	/* top:0px;
+	bottom:0px;
+	left:0px; */
+	width:100%;
+	border-collapse:collapse;
+	max-height:170px;
+	max-width:200px;
+}
+

@@ -1,0 +1,40 @@
+ .sparql-endpoint-editor-window{
+  margin:0px auto;
+  color:white;
+}
+
+.sparql-endpoint-box{
+    text-align:left;
+    display:none;
+    background-color:black;
+    border:solid 4px #f58400;
+    font-size:14px;
+    position:fixed;
+}
+
+
+
+.close-sparql-endpoint-editor-icon{
+	float: right;
+	position:relative;
+	top:3px;
+}
+
+.add-sparql-endpoint-form{
+	padding:8px;
+	position:absolute;
+	top:40px;
+	left:0px;
+	right:0px;
+	height:400px;
+}
+	
+.sparql-query-box{
+	position:relative;
+	height:250px;
+	width:450px;
+	border:solid 1px #707070;
+	padding:3px;
+}
+
+

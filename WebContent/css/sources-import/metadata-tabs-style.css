@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+.tables-area{
+	position:relative;
+	top:5px;
+	height:auto;
+	min-height:200px;
+	border:solid 1px #707070;
+	max-width:500px;
+	margin:5px;
+}
+.table-name-area{
+	height:30px;
+	background-color:#E8E8E8;
+	margin:auto; 
+	font-size:medium; 
+	color:black;
+}
+.metadata-table-area{
+	float:left;
+	position:relative;
+	top:5px;
+	left:5px;
+	border:solid 1px #707070;
+	border-radius:5px;
+	height:auto;
+	font-size:small;
+	background-color:#F5F5FF; 
+	color:black;
+	min-height:100px;
+	min-width:100px;
+	
+}
+
+.metadata-table{
+	border-collapse:collapse;
+	position: relative;
+	float:left; 
+	max-width: 200px; 
+	margin:auto;
+	/* //background-color: white; */
+	border:solid 1px #707070;
+}
+
+.metadata-table-header-row{
+	border:solid 1px #707070;
+}
+
+.metadata-row{
+	border:solid 1px #707070;
+}
+.metadata-cell{
+	border:solid 1px #707070;
+}

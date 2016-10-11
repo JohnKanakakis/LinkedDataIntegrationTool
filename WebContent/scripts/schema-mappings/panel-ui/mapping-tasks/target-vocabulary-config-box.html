@@ -1,0 +1,41 @@
+<div id="target-vocabulary-config-box" class='window-box'>
+	<div id="target-vocabulary-config-box-header" class='window-box-header'>
+		<span>New vocabulary configuration</span>
+   		<!-- <img class="close-icon" src="img/cross.png" width="16px" height="16px" > -->
+   		<span class="ui-icon ui-icon-closethick close-icon"></span>
+	</div>
+	<form id="vocabulary-config-form" style="padding: 5px;position:absolute;top:30px;left:0px;right:0px;bottom:0px">
+		<!-- <p style="padding-left: 5px;font-size:small;font-style:italic">Vocabularies must be in Turtle,N3 or RDF/XML format. -->
+		<table style="border-collapse:collapse;width:100%">
+	  		<tr style="display: block;">
+	   			<td style="font-style:italic">Vocabularies must be in Turtle,N3 or RDF/XML format.</td>
+	   		</tr>
+	  		<tr style="display: block;">
+	   			<!-- <td>URL:</td> -->
+	   			<!-- <td><input type='text' id='vocabulary-url' size='50'></td> -->
+	   			<td style="width:50px">File:</td>
+	   			<td><input type='file' id='file-name' required size='50'></td>
+	   		</tr>    
+	   		<tr style="display: block;">
+	     		<td style="width:50px">Name: </td>       
+	     		<td> <input type='text' id='vocabulary-name' size='25'></td>
+	   		</tr>
+	    </table>
+	    <hr style="border-bottom:0.3px solid #aaaaaa">
+	    <table style="border-collapse:collapse;width:100%;margin-bottom: 30px;">
+			<tr style="display: block;">
+				<td style="font-style:italic;font-size:small">Provide a prefix-namespace pair for this vocabulary(optional):</td>
+			</tr>
+			<tr style="display: block;">
+				<td>Prefix: </td>       
+				<td> <input type='text' id='vocabulary-prefix' size='20'></td>
+				<td>Namespace: </td>       
+				<td> <input type='text' id='vocabulary-ns' size='30'></td>
+			</tr>
+	   	</table>
+	   	<button type="button" id='import-vocabulary'>Import Vocabulary</button> 
+    	<button type="button" class='config-box-close-button'>Close</button>
+    	<div class='vocabulary-loading' style="height:40px;width:40px;float:right;display:none"></div>
+	</form>
+    
+</div>

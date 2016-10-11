@@ -1,0 +1,522 @@
+*{
+	/* font-size:medium; */
+	font-family: Segoe UI,Arial,sans-serif;
+}
+
+div{
+	text-overflow: ellipsis;
+}
+
+a,li{
+	outline:none;
+}
+.ui-icon{
+	cursor:pointer;
+}
+button{
+	cursor:pointer;
+}
+
+.ajax-message{
+	position: absolute;
+	width: 360px;
+	height: 170px;
+	background-color: #4682B4;
+	border-radius: 20px;
+	box-shadow: 2px 2px 6px #aaaaaa;
+	font-size: x-large;
+	color:white;
+	z-index: 100;
+}
+
+.vocabulary-term{
+	cursor:pointer;
+}
+
+.hoverable:hover{
+	background-color:#f5f5f5;
+	cursor: pointer;
+}
+div.selected{
+	background-color:#f5f5f5;
+}
+
+.mainContent{
+ 	position:absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px; 
+ 	background-color:white;  
+	min-width:1100px;
+	min-height:600px;
+}
+
+div.loading{
+	background-image:url('/DataIntegrationTool/img/ajax-loader.gif');/* url('/DataIntegrationTool/img/loading-image1.gif'); */
+	background-position: 50% 50%;
+	background-repeat:no-repeat; 
+}
+
+div.vocabulary-loading{
+	background-image:url('/DataIntegrationTool/img/ajax-loader.gif');
+	background-position: 50% 50%;
+	background-repeat:no-repeat; 
+}
+
+.loading-box{
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	background-color: #F5F5F5;
+	top: 50%;
+	left: 50%;
+	z-index: 13;
+	float: left;
+	display: block;
+	border-radius: 20px;
+}
+
+/************************************** header *********************************************************/
+
+.header{ 
+	position:absolute;
+	left:0;
+	right:0;
+	top:0px;
+	height: 75px; 
+	overflow: hidden; 
+	/* border-bottom:solid 1px #aaaaaa; */
+	color: black;
+	font-size: medium;
+	float:left;
+}
+
+.header-text{
+	position:relative;
+	top:0px;
+	margin-top:0px;
+}
+
+.header #logo-area{
+	position: absolute;
+	top: 0px;
+	left:0px;
+	width:160px;
+	height: 45px;
+	background-image: url('/DataIntegrationTool/img/project-logo.PNG');
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+
+#steps-area{
+	position:absolute;
+	top:0px;
+	height: 45px;
+	left:20%;
+	width:80%;
+	/* border-bottom: 1px solid #aaaaaa; */
+}
+
+.step{
+	position:absolute;
+	top:1px;
+	height:40px;
+	min-width:160px;
+	margin-left:5px;
+	margin-right:5px;
+	text-align:left;
+    border:solid 1px #aaaaaa;
+    border-radius:20px;
+    color:black;
+	float:left;
+}
+.step-line{
+	position:absolute;
+	top:0px;
+	bottom:0px;
+}
+
+.next-step-button-container{
+	position:absolute;
+	top:45px;
+	left:0px;
+	right:0px;
+	height:30px;
+	border-top:1px solid #aaaaaa;
+	background-color: #f5f5f5;
+}
+#proceed-to-next-step-button{
+	position:relative;
+	float:right;
+	height:25px;
+	width:180px;
+	text-align:left;
+}
+
+#next-button-title{
+	position:relative;
+	float:left;
+}
+
+.next-step-button-icon{
+	position:relative;
+	height:20px;
+	width:20px;
+	background-image: url('/DataIntegrationTool/externals/jquery.treeview/images/right-icon.png');
+	background-position:0px 0px;
+	background-repeat:no-repeat; 
+	float:left;
+}
+
+.ui-tooltip{
+	font-size:small;
+	border:1px solid #aaaaaa;
+}
+.ui-tooltip-content{
+	font-size:small;
+}
+/******************************************* panels **********************************************************/
+
+#main-tabs{
+	position: absolute; 
+	top: 75px; 
+	left:0px;
+	right:0px;
+	bottom:0px;
+	min-height:500px;
+	background:white; 
+	border: 1px solid #aaaaaa;
+}
+
+#history-info{
+	overflow:auto;
+}
+
+.left-vertical-panel{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width:250px;
+	bottom: 0px;
+	border-right: solid 1px #aaaaaa;
+	font-size:medium;
+}
+.right-vertical-panel{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width:250px;
+	bottom: 0px;
+	border-left: solid 1px #aaaaaa;
+	z-index:100;
+}
+
+.box-header{
+	position: absolute;
+	top:0px; 
+	left:0px; 
+	right:0px;
+    height:30px; 
+	text-align:left;
+	float:left;
+	/* background:-o-linear-gradient(bottom, #4c4c4c 5%, #000000 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4c4c4c), color-stop(1, #000000) );	
+	background:-moz-linear-gradient( center top, #4c4c4c 5%, #000000 100% );	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#4c4c4c", endColorstr="#000000");	
+	background: -o-linear-gradient(top,#4c4c4c,000000);
+	background-color:#4c4c4c; */
+	border-bottom:solid 1px #aaaaaa;
+	line-height: 2;
+}
+.box-body{
+	position:absolute;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	top:30px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
+.box-body.loading{
+	background: white
+                url('/DataIntegrationTool/img/loading-image1.gif') 
+                50% 50% 
+                no-repeat;
+    opacity:0.5;
+    z-index:100;
+}
+
+
+.main-panel{
+	border:0px;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	font-size:small;
+}
+/* .action-box{
+	position:absolute;
+	right:0px;
+	height:50px;
+	left:0px;
+	border-bottom:solid 1px #707070;
+	line-height: 3;
+	padding-left:5px;
+} */
+
+.add-icon-span{
+	position: relative;
+	width: 20px;
+	height: 20px; 
+	margin:5px;  
+	background-image: url('/DataIntegrationTool/img/plus-icon.png');
+	background-repeat: no-repeat;
+	background-position: 2px 2px;
+	cursor: pointer;
+	background-size: 16px 16px;
+	display: block;
+	/* border: 1px solid #aaaaaa;
+	border-radius: 2px;
+	background-color: #F5F5F5; */
+	float: right;
+}
+
+.menu-span{
+	position: relative;
+	width: 16px;
+	height: 16px;
+	background-image: url('/DataIntegrationTool/img/white-menu-icon.png');
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	margin: 8px;
+}
+
+
+.menu-span:hover,.add-icon-span:hover{
+	/* border: 1px solid #aaaaaa; */
+	border-radius: 2px;
+	background-color: #F5F5F5;
+}
+
+
+
+.ui-tabs-vertical .ui-tabs-nav-vertical {
+	padding: 0.2em 0.1em 0.2em 0.2em;
+	left: 0px;
+	right: 0px;
+	top: 35px;
+	position: absolute;
+	bottom: 0px;
+	background: none repeat scroll 0% 0% transparent;
+}
+.ui-widget-header{border:0px;}
+.ui-tabs-vertical .ui-tabs-nav-vertical li {
+	width: 100%;
+	left: -3px;
+	border-bottom-width: 1px !important;
+	border-right-width: 0 !important;
+	margin-bottom: 2px;
+	list-style: none;
+	position: relative;
+	top: 0;
+	margin: 1px .2em 0 0;
+	border-bottom-width: 0;
+	padding: 0;
+	white-space: nowrap;
+	height:40px;
+}
+.ui-tabs-vertical .ui-tabs-nav-vertical li a {
+	display: block;
+	float: left;
+	padding: .5em 1em;
+	text-decoration: none;
+	line-height: 1.3;
+}
+
+.ui-tabs-vertical .ui-tabs-nav-vertical li.ui-tabs-active {
+	margin-bottom: 2px;
+	padding-bottom: 0;
+	padding-right: 0px;
+	border-right-width: 0px;
+}
+
+.main-tab{
+	position:absolute;
+	top: 0px; 
+	left:0px;
+	bottom:0px;
+	right:0px;
+}
+.main-tab.slided{
+	position:absolute;
+	top: 0px; 
+	left:251px;
+	bottom:0px;
+	right:0px;
+}
+
+
+.ui-menu.ui-state-focus{
+	background:blue;
+	/* background-color:blue; */
+}
+
+.grid-container{
+	position:absolute;
+	height:380px;
+	width:920px;
+	border-top:solid 1px #aaaaaa;
+	border-bottom:solid 1px #aaaaaa;
+}
+
+ 		 	
+#results-menu .expandable-hitarea {
+	/* position: relative;
+	top: 5px;
+	left: 0px;
+	margin-right: 5px;
+	margin-left: 0px;
+	float: left;
+	cursor: pointer;
+	width:16px;
+	height:16px; */
+	
+/* 	background:-moz-linear-gradient( center top, #f58400 10%, #000000 100% );	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f58400", endColorstr="#000000");	
+	background: -o-linear-gradient(top,#f58400,000000); */
+	background: #f58400 url('/DataIntegrationTool/externals/jquery.treeview/images/right-icon.png') 0px 0px no-repeat; 
+}
+
+#results-menu .collapsable-hitarea{
+/* 	position: relative;
+	top: 5px;
+	left: 0px;
+	margin-right: 5px;
+	margin-left: 0px;
+	float: left;
+	cursor: pointer;
+	width:16px;
+	height:16px; */
+	background: #f58400 url('/DataIntegrationTool/externals/jquery.treeview/images/down-icon.png') 0px 0px no-repeat; 
+}
+
+ul#history-menu{
+	
+}
+ 
+#history-menu .hitarea{
+	height:15px;
+	width:15px;
+	float:left;
+}
+
+#history-menu .expandable-hitarea{
+	background-image: url('/DataIntegrationTool/externals/jquery.treeview/images/right-icon.png');
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+}
+
+#history-menu .collapsable-hitarea{
+	
+	background:url('/DataIntegrationTool/externals/jquery.treeview/images/down-icon.png');
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+} 
+
+
+#history-menu li{
+	border-bottom:solid 1px #aaaaaa
+}
+#history-menu li.lastExpandable{
+	border:0;
+}
+#history-menu li.lastCollapsable{
+	border:0;
+}
+
+
+#history-menu li.property-li:nth-child(even) {background-color:white}
+#history-menu li.property-li:nth-child(odd) {background-color: #F5F5F5}
+
+
+
+/***************************************** windows ****************************************************/
+
+.pop-up-window,
+.add-new-source-window,
+.new-mapping-file-config-window,
+.transformation-window,
+.new-target-vocabulary-config-window {
+  color:black;
+} 
+
+.menu{
+	display:none;
+}
+
+
+
+.window-box,.add-new-source-box,.new-file-config-box,.transformation-box {
+    text-align: left;
+	display: none;
+	background-color: white;
+	border: solid 1px #aaaaaa;
+	font-size: 14px;
+	position: fixed;
+	border-radius: 4px;
+	z-index: 100;
+	color:black;
+	box-shadow: 4px 4px 14px #aaaaaa;
+}
+
+.window-box-header,.new-source-box-header,.new-file-config-box-header,.transformation-box-header {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 30px;
+	background-color: #f5f5f5;
+	color: black;
+	padding-left: 5px;
+	border-bottom: 1px solid #aaaaaa;
+	font-size: medium;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.form-container{
+	position:absolute;
+	top:30px;
+	left:0px;
+	right:0px;
+	height:200px;
+	padding-left:10px;
+}
+.button-container{
+	position:absolute;
+	top:230px;
+	left:0px;
+	right:0px;
+	height:70px;
+	padding-left:10px;
+}
+.close-new-source-box-icon,.close-icon{
+	float: right;
+	position:relative;
+	top:3px;
+	cursor:pointer;
+}
+
+.query-text-area{
+	padding:10px;
+	font-size:10pt !important;
+	font-family:monospace !important;
+}

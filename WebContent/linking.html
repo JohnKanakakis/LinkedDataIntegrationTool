@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd'>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+	<title>Data Integration</title>
+	<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+
+	<script src="scripts/js/jquery-1.10.2.min.js"></script>
+	<script src="scripts/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+	<script type="text/javascript" src='externals/selectBox/jquery.selectbox-0.2.js'></script>
+	<script type="text/javascript" src="externals/jsPlumb/jquery.jsPlumb-1.5.2-all.js"></script>
+	<script type="text/javascript" src="externals/jquery.treeview/lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="externals/jquery.treeview/jquery.treeview.js"></script>
+	<script type="text/javascript" src="externals/pagination/jquery.pagination.js"></script>
+	
+	<script type="text/javascript" src='scripts/linking-data/panel-ui/panel-ui.js'></script>
+	<script type="text/javascript" src='scripts/general/util.js'></script>
+	<script type="text/javascript" src='scripts/general/history-info-ui.js'></script>
+	
+	
+	<script type="text/javascript" src='scripts/linking-data/panel-ui/new-linking-task-config-ui.js'></script>
+	<script type="text/javascript" src='scripts/linking-data/panel-ui/task-configuration-ui.js'></script>
+	<script type="text/javascript" src='scripts/linking-data/panel-ui/editor-ui.js'></script>
+	<script type="text/javascript" src='scripts/linking-data/panel-ui/results-ui.js'></script>
+	<script type="text/javascript" src='scripts/linking-data/panel-ui/linking-panel-control-ui.js'></script>
+	<script type="text/javascript" src='scripts/linking-data/linking-manager.js'></script>
+	<script type="text/javascript" src='scripts/linking-data/editor-manager.js'></script>
+	<script type="text/javascript" src='scripts/linking-data/init.js'></script>
+	
+	
+	
+	<link rel='stylesheet' type='text/css' href='externals/pagination/pagination.css'  media='screen' charset='utf-8'>
+	<link rel='stylesheet' type='text/css' href='externals/selectBox/jquery.selectbox.css'  media='screen' charset='utf-8'>
+	<link rel='stylesheet' type='text/css' href='externals/jquery.treeview/jquery.treeview.css' media='screen' charset='utf-8'></link>
+	<link rel='stylesheet' type='text/css' href='css/global-style.css' media='screen' charset='utf-8'>
+	<link rel='stylesheet' type='text/css' href='css/ui-smoothness/jquery-ui-1.10.3.custom.css' media='screen' charset='utf-8'>
+	
+	<link rel='stylesheet' type='text/css' href='css/linking-data/style.css' media='screen' charset='utf-8'>
+	<link rel='stylesheet' type='text/css' href='css/linking-data/function-boxes.css' media='screen' charset='utf-8'>
+</head>
+<body>
+
+
+	<div class='mainContent'> 
+		<div class='header'> </div>
+		<div id="main-tabs" class="ui-corner-all">
+			<!-- <div id="tabs-vertical-panel" class='left-vertical-panel'>
+				<div class='action-box-header box-header'>
+					Menu 
+				</div>
+				<ul>
+					<li><a href="#info-tab">Information about this step</a></li>
+					<li><a href="#linking-tasks-tab">Linking tasks</a></li>
+					<li><a href="#history-info">History</a></li>
+				</ul>
+			</div>
+			<div id="info-tab" class='main-tab'>
+				<span class='menu-span hide-span'></span>
+				<h2>Information about this step</h2>
+			</div> -->
+			<div id="linking-tasks-tab" class='main-tab'>
+				<div id="linking-tasks-left-panel" class="left-vertical-panel" style="width:220px;">
+					<div id="linking-tasks-left-panel-header" class='box-header'>
+						<span id="linking-tasks-menu-icon" class='menu-span'></span>
+						<ul id="linking-tasks-menu" class="ui-menu" style="position:absolute;top:20px;left:10px;cursor:pointer;width:150px;height:50px;z-index:100;font-size:small;float:left">
+  							<li id="history"><a>History</a></li>
+  							<li id="step-info"><a>Info about this step</a></li>
+						</ul>
+						<span id="linking-tasks-general-info"style="position:absolute;left:30px;width:auto;height:100%;top:0px;">Linking Tasks</span>	
+						<span id="add-new-linking-task" class='add-icon-span'></span>
+					</div>
+					<div id="linking-tasks-left-panel-body" class='box-body'></div>
+				</div>
+				<div id="linking-task-panel" class="main-panel">	
+					<ul id="linking-task-navigation-bar">
+						<li><a href="#linking-editor-panel">Linking editor</a></li> <!-- onclick="window.history.pushState('state1','steps', window.location.pathname+'/steps-so-far');"-->
+						<li><a href="#results-panel">Results</a></li>
+					</ul>
+					<div id="linking-editor-panel">
+						<div id="linking-editor-buttons-container">
+							<button id="task-start-button" style="float:right">
+								<span class="ui-icon ui-icon-play" style="float:left"></span>
+								<span>Start linking</span>
+							</button>
+							<button id="task-config-button" style="float:right">
+								<span class="ui-icon ui-icon-wrench" style="float:left"></span>
+								<span style="float:left;margin-left:5px;">Configure</span>
+							</button>
+							<!-- <button id="task-save-button" style="float:right">
+								<span class="ui-icon ui-icon-disk" style="float:left"></span>
+								<span style="float:left;margin-left:5px;">Save</span>
+							</button> -->
+						</div>
+						<div id="linkage-rule-elements-canvas" class="ui-corner-all">
+							<div class='info-subpanel source-path-subpanel rule-subpanel'>
+								<div class='info-subpanel-header' style="padding-left: 10px;">
+									<span style="float:left">Source dataset's paths</span>
+									<span class='ui-icon ui-icon-refresh' style="float:left"></span>
+								</div>
+				    			<div class='info-subpanel-body'></div>
+							</div>
+							<div class='info-subpanel target-path-subpanel rule-subpanel'>
+								<div class='info-subpanel-header' style="padding-left: 10px;">
+									<span style="float:left">Target dataset's paths</span>
+									<span class='ui-icon ui-icon-refresh' style="float:left"></span>
+								</div>
+				   	 			<div class='info-subpanel-body'></div>
+							</div>
+							<div class='info-subpanel transform-subpanel rule-subpanel'>
+								<div class='info-subpanel-header'>Transformation Functions</div>
+				    			<div class='info-subpanel-body'></div>
+							</div>
+							<div class='info-subpanel compare-subpanel rule-subpanel'>
+								<div class='info-subpanel-header'>Compare Functions</div>
+				    			<div class='info-subpanel-body'></div>
+							</div>
+							<div class='info-subpanel aggregation-subpanel rule-subpanel'>
+								<div class='info-subpanel-header'>Aggregation Functions</div>
+				    			<div class='info-subpanel-body'></div>
+							</div>
+						</div>
+						<div id="linkage-rule-container" class="ui-corner-all"></div>
+					</div>
+					<div id="results-panel">
+						<div id="confirm-task-container" class="buttons-container">
+							<div id="links-button-set">
+  								<input type="radio" class="links-radio" id="accepted-links-radio" name="links-radio" checked="checked"><label for="accepted-links-radio">Accepted Links</label>
+  								<input type="radio" class="links-radio" id="links-to-verify-radio" name="links-radio"><label for="links-to-verify-radio">Links to verify</label>
+							</div>
+							<button id="confirm-task-button" class='common-button'>Confirm task</button>
+						</div>
+						<div id="accepted-links" class="links-result-div"></div>
+						<div id="links-to-verify" class="links-result-div"></div>
+					</div>
+				</div>
+				<div id="history-panel" class="main-panel" style="display:none"></div>
+			</div>
+		</div>
+	</div>
+	<div id='new-linking-task-config-window' class='pop-up-window'></div>
+	<div id='linking-task-config-window' class='pop-up-window' ></div>
+</body>
+</html>

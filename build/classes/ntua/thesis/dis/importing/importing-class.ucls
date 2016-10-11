@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="true" nesting-relationships="true">  
+  <class id="1" language="java" name="ntua.thesis.dis.importing.SourcesManager" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/importing/SourcesManager.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="216" x="324" y="194"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" language="java" name="ntua.thesis.dis.importing.converter.Converter" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/importing/converter/Converter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="208" x="344" y="346"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" language="java" name="ntua.thesis.dis.importing.converter.JSONToRDFConverter" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/importing/converter/JSONToRDFConverter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="200" x="263" y="539"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="ntua.thesis.dis.importing.converter.TabularToRDFConverter" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/importing/converter/TabularToRDFConverter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="205" x="534" y="536"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="ntua.thesis.dis.importing.source.DBConnectionSource" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/importing/source/DBConnectionSource.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="247" x="665" y="121"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="ntua.thesis.dis.importing.source.SPARQLEndpointSource" 
+    project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/importing/source/SPARQLEndpointSource.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="168" x="685" y="247"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="ntua.thesis.dis.importers.ExcelParser" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/importers/ExcelParser.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="186" x="88" y="192"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="ntua.thesis.dis.importers.VocabularyExtractor" project="DataIntegrationTool" 
+    file="/DataIntegrationTool/main/src/ntua/thesis/dis/importers/VocabularyExtractor.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="53" width="184" x="91" y="104"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="9">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="10">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="11" name="sparqlEndpoints">        
+        <position height="18" width="85" x="563" y="254"/>      
+      </attribute>      
+      <multiplicity id="12" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="13">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="14" name="convertorsToRDF"/>      
+      <multiplicity id="15" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="16">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <dependency id="17">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="18">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="19" name="dbConnections"/>      
+      <multiplicity id="20" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

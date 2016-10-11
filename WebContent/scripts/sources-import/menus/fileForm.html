@@ -1,0 +1,33 @@
+<form id="file-form">
+	<input type="radio" class="file-source-type" name="file-source-type" value="local-file">Local file 
+	<input type="radio" class="file-source-type" name="file-source-type" value="URL">URL
+	<table class="URL-source-table" style="display: none;">
+		<tr class='input'>
+			<td>URL:</td>
+			<td><input type='text' name='fileURL' required size='50'></td>
+		</tr>
+		<tr class='input'>
+			<td>File name:</td>
+			<td><input type='text' name='fileURL-name' required size='50'></td>
+		</tr>
+		<!-- <tr class='input'>
+			<td>
+				<button type="button" class='new-url-import-button'>Import data</button>
+			</td>
+			<td>
+				<button type="button" class='add-new-source-subform-CANCEL-button'>Close</button>
+			</td>
+		</tr> -->
+	</table>
+	<table class="local-source-table" style="display: none;">
+		<tr class='input'>
+			<td>Select file:</td>
+			<td><input id="file-upload" type='file'/></td>
+		</tr>
+		<!-- <tr>
+			<td>
+				<button type="button" class='add-new-source-subform-CANCEL-button'>Close</button>
+			</td>
+		</tr> -->
+	</table>
+</form>

@@ -1,0 +1,23 @@
+<div class='sparql-endpoint-box window-box'>
+	<div class='window-box-header'>
+		<span style="padding-right:5px;">Endpoint:</span>
+		<span id="sparql-endpoint-url"></span>
+		<span class='ui-icon ui-icon-closethick close-sparql-endpoint-editor-icon' style="float:right"></span>
+	</div>
+	<div class="form-container" style="bottom:2px !important">
+	<form class='add-sparql-endpoint-form'>
+		<br>
+		Write your CONSTRUCT query in the following area:
+		<div class='sparql-query-box'>
+			<textarea rows="23" cols="52" class='query-text-area ui-corner-all' style="max-width:450px"></textarea> 
+		</div>
+		<button type="button"
+			class='submit-query-to-sparql-endpoint-button'>Submit query</button>
+		<button type="button"
+			class='close-sparql-endpoint-button'>Close</button>
+	</form>
+	</div>
+	<div class='loading-message' style="background-image: url('/DataIntegrationTool/img/ajax-loader.gif');right: 0px;
+									    width: 50px;height: 50px;">
+	</div>
+</div>

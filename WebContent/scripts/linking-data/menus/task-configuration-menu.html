@@ -1,0 +1,74 @@
+<div id="linking-task-confing-box" class='window-box'>
+	<div class='window-box-header'>
+		Current linking task configuration
+   		<img class="close-icon" src="img/cross.png" width="16px" height="16px" >
+	</div>
+	<div class="form-container" style="height:340px;top:30px;">
+		<form id="task-config-form" style="position:absolute;top:0px;left:0px;bottom:0px;right:0px;padding-left:10px">
+			<table style="border-collapse:collapse;table-layout:fixed">
+				<tr>
+		     		<td>Task name: </td>       
+		     		<td> <input type='text' id='link-task-name' size='50'></td>
+		   		</tr>
+		  		<tr>
+		   			<td>Source dataset:</td>
+		   			<td> <input type='text' id="source-dataset-name" size='50' readonly></td>
+		   		</tr>
+		   		<tr>
+		   			<td>Target dataset:</td>
+		   			<td> <input type='text' id="target-dataset-name" size='50' readonly></td>
+		   		</tr>    
+		   		<tr>
+		   			<td>Source restrict to:</td>
+		   			<td> <input type='text' id='config-source-restrict-to' size='50'></td>
+		   			<td id="source-var" class='var-td' style="display:none"><span style="width:150px">Specify the source var:</span><select class="vars-select" id="source-vars-select"></select></td>
+		   			<td class="loading-icon-td" style="display:none"><img src="img/loading-icon-1.gif" width="16px" height="16px"></td>
+		   		</tr>
+		   		<tr>
+		   			<td>Target restrict to:</td>
+		   			<td> <input type='text' id='config-target-restrict-to' size='50'></td>
+		   			<td id="target-var" class='var-td' style="display:none"><span style="width:150px">Specify the target var:</span><select class="vars-select" id="target-vars-select"></select></td>
+		   			<td class="loading-icon-td" style="display:none"><img src="img/loading-icon-1.gif" width="16px" height="16px"></td>
+		   		</tr>
+		   		<tr>
+		   			<td>Accepted links confidence window:</td>
+		   			<td>
+		   				<div id="accept-slider" class="confidence-slider"></div>
+		   				<table class="confidence-table" style="float:right">
+		   					<tr>
+		   						<th>Min:</th>
+		   						<td><input type='text' id='accept-min-confidence' class="min-conf" size='3' readonly></td>
+		   						<th>Max:</th>
+		   						<td><input type='text' id='accept-max-confidence' class="max-conf" size='3' readonly></td>
+		   					</tr>
+		   				</table> 
+		   			</td>
+		   		</tr>
+		   		<tr>
+		   			<td>Verified links confidence window:</td>
+		   			<td>
+		   				<div id="verify-slider" class="confidence-slider"></div>
+		   				<table class="confidence-table" style="float:right">
+		   					<tr>
+		   						<th>Min:</th>
+		   						<td><input type='text' id='verify-min-confidence' class="min-conf" size='3' readonly></td>
+		   						<th>Max:</th>
+		   						<td><input type='text' id='verify-max-confidence' class="max-conf" size='3' readonly></td>
+		   					</tr>
+		   				</table> 
+		   			</td>
+		   		</tr>
+		   		<tr>
+		   			<td> Limit source links:</td>
+		   			<td><input type='text' id='filter-limit' size='10'></td>
+		   		</tr>
+		    </table>
+		</form>
+	</div>
+	<div style="position:absolute;bottom:0px;height:30px;left:0px;right:0px;padding-left:10px">
+		<button type="button" id='config-box-ok-button'>OK</button> 
+    	<button type="button" class='config-box-close-button'>Cancel</button>
+	</div> 
+</div>
+
+

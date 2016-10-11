@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd'>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+	<title>Data Integration</title>
+	<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+	
+	<script src="scripts/js/jquery-1.10.2.min.js"></script>
+	<script src="scripts/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+	<script type="text/javascript" src='scripts/general/util.js'></script>
+	
+	<script type="text/javascript" src='scripts/sources-import/init.js'></script>
+	<script type="text/javascript" src='scripts/sources-import/controller.js'></script>
+	
+	<script type="text/javascript" src='scripts/sources-import/new-source-ui.js'></script>
+	<script type="text/javascript" src='scripts/sources-import/sources.js'></script>
+	<script type="text/javascript" src='scripts/sources-import/sources-ui/sources-preview-ui.js'></script>
+	<script type="text/javascript" src='scripts/sources-import/sources-ui/sparql-endpoint-ui.js'></script>
+	<script type="text/javascript" src='scripts/sources-import/sources-ui/relational-ui.js'></script>
+	<script type="text/javascript" src='scripts/sources-import/sources-ui/imported-datasets-ui.js'></script>
+
+	<script type="text/javascript" src='scripts/sources-import/editors/sparql-endpoint-editor-ui.js'></script>
+	<script type="text/javascript" src='scripts/sources-import/editors/query-editor-ui.js'></script>
+	
+  	
+  	<!-- slick scripts -->
+  	<script type="text/javascript" src="externals/slick/jquery.event.drag-2.2.js"></script>
+  	<script type="text/javascript" src="externals/slick/slick.core.js"></script>
+  	<script type="text/javascript" src="externals/slick/slick.grid.js"></script>
+  	
+  	<link rel="stylesheet" href="externals/slick/slick.grid.css" type="text/css"/>
+  	
+
+  	<!-- recline scripts -->
+  	<link rel='stylesheet' type='text/css' href='externals/recline/css/grid.css'>
+	<link rel='stylesheet' type='text/css' href='externals/recline/css/slickgrid.css'  media='screen' charset='utf-8'>
+	<link rel='stylesheet' type='text/css' href='externals/recline/css/transform.css'  media='screen' charset='utf-8'>
+  	
+  	<script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js'></script>
+	<script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js'></script>
+	<script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js'></script>
+	<script type="text/javascript" src='externals/recline/recline.js'></script>
+	
+	<!-- <script type="text/javascript" src="externals/recline/bootstrap.js"></script> -->
+  	
+  	<script type="text/javascript" src="externals/recline/jquery-ui-1.10.3.custom.min.js"></script>
+  	<script type="text/javascript" src="externals/recline/jquery.event.drag-2.2.js"></script>
+	
+	<script type="text/javascript" src="externals/recline/slick.grid.min.js"></script> 
+
+	
+	
+	<script type="text/javascript" src="externals/recline/view.slickgrid.js"></script> 
+	
+	<!-- <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css'  media='screen' charset='utf-8'> -->
+	<link rel='stylesheet' type='text/css' href='css/global-style.css'  media='screen' charset='utf-8'>
+	<link rel="stylesheet" href="css/ui-smoothness/jquery-ui-1.10.3.custom.css" />
+  	
+	<!-- <link rel='stylesheet' type='text/css' href='css/sources-import/query-editor.css'   media='screen' charset='utf-8'> -->
+	<link rel='stylesheet' type='text/css' href='css/sources-import/style.css'   media='screen' charset='utf-8'>
+	<!-- <link rel='stylesheet' type='text/css' href='css/sources-import/sparql-endpoint-editor.css'  media='screen' charset='utf-8'> -->
+	<!-- <link rel='stylesheet' type='text/css' href='css/new-source-box.css'  media='screen' charset='utf-8'> -->
+	<link rel='stylesheet' type='text/css' href='css/sources-import/metadata-tabs-style.css'  media='screen' charset='utf-8'>
+	
+	
+	<link href="externals/jquery.treeview/jquery.treeview.css" rel="stylesheet"></link>
+	<script type="text/javascript" src="externals/jquery.treeview/lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="externals/jquery.treeview/jquery.treeview.js"></script>
+
+</head>
+<body>
+
+
+	<div class='mainContent'> 
+		<div class='header'> </div>
+		<div id="main-tabs">
+			<ul id="main-tabs-navigation">
+				<li><a href="#sources-preview">Sources Preview</a></li>
+				<li><a href="#imported-datasets">Datasets to import</a></li>
+			</ul>
+			<div id="sources-preview" class='main-tab'>
+				<div class='sources-preview-left-canvas ui-corner-all'>
+					<div id="sources-accordion">
+						 
+						<h3>Files<span id="add-file" class='add-icon-span add-source-span'></span></h3>
+						<div class='list-sources-section files-section'> <!--  -->
+							
+						</div>
+						
+						<h3>Database Connections <span id="add-database" class='add-icon-span add-source-span'></span></h3>
+						<div class='list-sources-section database-connections-section'> 
+						</div>
+						<h3>SPARQL endpoints <span id="add-endpoint" class='add-icon-span add-source-span'></span></h3>
+						<div class='list-sources-section sparql-endpoints-section'>
+							
+						</div>
+					</div>
+				</div>
+				<div id='sources-preview-main-area' class="ui-corner-all">
+				</div>	
+			</div> 
+			<div id="imported-datasets">
+				<p class="initial-message" style="font-size:small">Not any dataset yet</p>
+			</div>	
+		</div>	
+	</div>
+	<div id='add-new-source-window' class='window pop-up-window'></div>
+	<div class='sparql-endpoint-editor-window pop-up-window'></div>
+	<div class="query-editor-window pop-up-window"></div>
+</body>
+</html>

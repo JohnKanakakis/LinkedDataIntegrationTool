@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd'>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+	<link rel='stylesheet' type='text/css' href='css/schema-mappings/style.css'   media='screen' charset='utf-8'>
+	<link rel='stylesheet' type='text/css' href='css/schema-mappings/mapping-layouts.css'   media='screen' charset='utf-8'>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  	
+</head>
+<body>
+<!-- <div class='mapping-box'>
+		<div class='delete-mapping-pair-box'>
+			<span style="position:absolute;top:0px;left:5px;height:15px;witdh:100px;float:left">One-to-many property mapping</span>
+			<img class="close-icon" src="img/cross.png" width="15px" height="15px" style="position:absolute;right:5px;top:0px;">
+		</div>
+		<table class='mapping-box-table'>
+			<tr>
+				<td class='source-term-area'>
+						<table class='mapping-table'>
+							<tr>
+								<td class='mapping-table-header'> Source Term 
+								</td>
+							</tr>
+							<tr>
+								<td class='main-cell droppable-area'>
+									<p>Drag here the vocabulary term you want from the Properties Section</p>
+								</td>
+							</tr>
+	        			</table>
+				</td>
+				<td class='target-term-area'>
+						<table class='mapping-table'>
+							<tr>
+								<td class='mapping-table-header'> Target Terms <img src='img/plus.png' width="20" height="20" style="float:right;cursor:pointer;" onclick="addTd()" title="click to add a new term">
+								</td>
+							</tr>
+							<tr>
+								<td class='main-cell'>
+									<div class='main-cell-content'>
+										<table class="target-terms-table">	
+										</table>
+									</div>
+							</tr>
+	        			</table>
+				</td>
+				
+			</tr>
+	    </table>
+</div> -->
+<div class='mapping-box'>
+		<div class='delete-mapping-pair-box'>
+			<span style="position:absolute;top:0px;left:5px;height:15px;witdh:100px;float:left">Many-to-one property mapping</span>
+			<img class="close-icon" src="img/cross.png" width="15px" height="15px" style="position:absolute;right:5px;top:0px;">
+		</div>
+		<table class='mapping-box-table'>
+			<tr>
+				<td class='source-term-area'>
+						<table class='mapping-table'>
+							<tr>
+								<td class='mapping-table-header'> Source Terms<img src='img/plus.png' width="20" height="20" style="float:right;cursor:pointer;" onclick="addDropArea()" title="click to add a new term"> 
+								</td>
+							</tr>
+							<tr>
+								<td style="height:100px;overflow:auto">
+									<div class='main-cell-content'>
+										<table class="target-terms-table ">	
+										</table>
+									</div>
+								</td>
+							</tr>
+	        			</table>
+				</td>
+				<td class='target-term-area'>
+						<table class='mapping-table'>
+							<tr>
+								<td class='mapping-table-header'> Target Term 
+								</td>
+							</tr>
+								
+							<tr class='main-target-row' style='font-size:12px'>
+							</tr>
+	        			</table>
+				</td>
+				
+			</tr>
+	    </table>
+</div>
+<!-- <td class='mapping-transformation-area'>
+						<table class='mapping-table'>
+							<tr>
+								<td class='mapping-table-header'> Transformation
+								</td>
+								<td class='mapping-table-header'>
+									<a href='#'> 
+		       							<img src='img/plus.png' width="25" height="25" style="padding:0px;margin:0px">
+		    						</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Click the button to add a transformation
+								</td>
+							</tr>
+	        			</table>
+				</td> -->
+<!-- <div class="file-info-area">
+	<div class="mapping-file-info">
+		<table class='info-table'>
+			<tr>
+				<td> Input File:
+				</td>
+				<td id="input-file">
+				</td>
+			</tr>
+	    </table>
+	</div>
+	<div class="buttons-area">
+		  
+    	 <button type="button" class='submit-mapping-file-button' style="float:right">Submit mappings</button>
+    	 <button type="button" class='delete-mapping-file-button' style="float:right">Delete mappings</button>
+    	 <button type="button" class='new-mapping-pair-button' style="float:right;">New mapping pair</button>
+	</div>
+</div> -->
+
+
+
+<div class="draggable" style="position:absolute;top:300px;left:100px;height:30px;width:40px;border:solid 1px #707070;background:white"></div>
+<div class="draggable" style="position:absolute;top:350px;left:100px;height:30px;width:40px;border:solid 1px #707070;background:white"></div>
+</body>
+<!-- <script>
+	function addTd(){
+		var table = $('.target-terms-table');
+		var tr = $('<tr>').html("<td class='target-term-cell'><div class='target-term-cell-content'>Type the target term:<br><input type='text' id='map-file-name' size='50'>"+
+				                "<button type='button' onclick='submitTerm(event)' style='position:relative;margin:0px;left:10px;'"+
+				                "title='Click to submit the info'>OK</button></div></td>")
+			
+				/* "<img src='img/transform-icon.png' width='20' height='20'"+ 
+				"style='position:relative;top:6px;left:2px;padding:0px;margin:0px;cursor:pointer'"+
+				"title='click to add a transformation'>"+
+				"</td>"); */
+		table.append(tr);
+	}
+	
+	function submitTerm(event){
+		var div = $(event.target).closest('div.target-term-cell-content');
+		div.fadeOut(1000,function(){
+			div.html("<div class='target-pattern-text-area'><p>new target pattern</p></div>"+
+				"<img src='img/transform-icon.png' width='20' height='20'"+ 
+				"style='position:relative;top:7px;left:10px;padding:0px;margin:0px;cursor:pointer;float:left;'"+
+				"title='Click to add a transformation'>"+
+				"<img class='close-icon' src='img/cross.png' width='20px' height='20px' style='position:relative;float:left;left:15px;top:5px;'>");
+		});
+		div.fadeIn(1000);
+	}
+</script> -->
+<script>
+	function addDropArea(){
+		var table = $('.target-terms-table');
+		var tr = $('<tr>').html("<td class='target-term-cell droppable-area'><div class='target-term-cell-content'>"+
+				 				"Drag here the vocabulary term you want from the Properties Section<br></div></td>");
+								/* "<input type='text' id='map-file-name' size='50'>"+
+				                "<button type='button' onclick='submitTerm(event)' style='position:relative;margin:0px;left:10px;'"+
+				                "title='Click to submit the info'>OK</button></div></td>" */
+			
+				/* "<img src='img/transform-icon.png' width='20' height='20'"+ 
+				"style='position:relative;top:6px;left:2px;padding:0px;margin:0px;cursor:pointer'"+
+				"title='click to add a transformation'>"+
+				"</td>"); */
+		table.append(tr);
+		enableDrop();
+	}
+	
+	function submitTerm(event){
+		var td = $(event.target).closest('td');
+		td.fadeOut(1000,function(){
+			td.html("<div class='target-pattern-text-area'><p>new target pattern</p></div>"+
+				"<img src='img/transform-icon.png' width='20' height='20'"+ 
+				"style='position:relative;top:7px;left:10px;padding:0px;margin:0px;cursor:pointer;float:left;'"+
+				"title='Click to add a transformation'>"+
+				"<img class='close-icon' src='img/back-icon.png' width='20px' height='20px' style='position:relative;float:left;left:15px;top:5px;'>");
+		});
+		td.fadeIn(1000);
+	}
+	
+	function enableDrop(){
+		//$(".droppable-area").droppable("enable");
+		$(".droppable-area").droppable({
+		      drop: function( event, ui ) {
+		    	  //$(this).text('here!!');
+		    	  //$(this).find('.source-term').css({'display':'block'});
+		    	  //$(".droppable-source-term-area" ).find('p').html('dropped!!');
+		    	  //ui.helper.css({'height':'50px','width':'90px','background':'red'});
+		    	  //$(".droppable-source-term-area" ).append(ui.helper);
+		    	  //ui.helper.appendTo($(".droppable-source-term-area" ));
+		    	  //ui.helper.css({'position':'relative','height':'50px','width':'90px','background':'red'});
+		    	  $(this).css({'background':'red'});
+		    	  $('.main-target-row').html("<td style='vertical-align:top'>Type the target term and click OK.<br><input type='text' id='map-file-name' size='50'>"+
+			                "<button type='button' onclick='submitTerm(event)' style='position:relative;margin:0px;left:10px;'"+
+			                "title='Click to submit the info'>OK</button></td>");
+		      },
+		      out: function( event, ui ) {
+		    	  $(".droppable-source-term-area" ).find('p').html('Drag here the vocabulary term you want from the Properties Section');
+		    	  ui.helper.css({'height':'30px','width':'40px','background':'white'}).text('');
+		      },
+		      over: function( event, ui ) {
+		    	  /* $(".droppable-source-term-area" ).find('p').html('over');
+		    	  var sourceTerm =  $(this).find('.source-term');
+		    	  if (sourceTerm.length != 1){
+		    		  var sourceTerm = $('<div>').addClass('source-term').css({'height':'50px','width':'90px','background':'yellow','display':'none'});
+			    	  sourceTerm.appendTo(".droppable-source-term-area" );
+		    	  } */
+		    	  //ui.helper.css({'height':'50px','width':'90px','background':'red'}).text('hi!');
+		    	  //ui.helper.appendTo($(".droppable-source-term-area" ));
+		    	  
+		      }
+		});
+	}
+		
+	$(".draggable").draggable({helper:"clone"}); 
+		 
+</script> 
+</html>
+
+
+
