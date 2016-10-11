@@ -13,8 +13,13 @@ contribution of the application is that users are able to combine - with little 
 heterogeneous data and extract useful information from them.
 
 ## Architecture
+![alt tag] (https://github.com/JohnKanakakis/LinkedDataIntegrationTool/blob/master/img/ARCHITECTURE.jpg)
 
-
-## Installation
+## Installation Guide
+1. Download the project
+2. Import project to Eclipse
+3. Configure Apache Tomcat server in Eclipse
+4. Deploy the project to Apache Tomcat
+5. Run the application
 
 ## User Interface
