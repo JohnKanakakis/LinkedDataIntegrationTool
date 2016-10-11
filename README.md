@@ -22,4 +22,4 @@ heterogeneous data and extract useful information from them.
 4. Deploy the project to Apache Tomcat
 5. Run the application
 
-## User Interface
+
