@@ -13,7 +13,7 @@ contribution of the application is that users are able to combine - with little 
 heterogeneous data and extract useful information from them.
 
 ## Architecture
-![alt tag] (https://github.com/JohnKanakakis/LinkedDataIntegrationTool/blob/master/img/ARCHITECTURE.jpg)
+![alt tag] (https://github.com/JohnKanakakis/LinkedDataIntegrationTool/blob/master/img/ARCHITECTURE.gif)
 
 ## Installation Guide
 1. Download the project
